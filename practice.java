@@ -1,9 +1,9 @@
-   
-
-
+import java.util.Scanner;
 
 public class practice {
     public static void main(String[] args) {
+
+
         
     
         
@@ -181,7 +181,7 @@ public class practice {
 
 
    
-            int n = 7; // Size of the pattern
+            /* int n = 7; // Size of the pattern
     
 
 
@@ -195,6 +195,150 @@ public class practice {
                     System.out.print("*"+" ");
                 }
                 System.out.println();
+            } */
+
+          /*   int z = 1; int n = 4;
+
+            for ( int i = 1; i<=n;i++){
+                for ( int j=n-1; j>=1;j--){
+                    System.out.print(" ");
+                } for ( int k = 1; k<=z; k++){
+                    System.out.print("*"+" ");;
+                } z +=2;
+                System.out.print("\n");
             }
-          
-        } }
+           */
+           /*  int n = 5;
+
+            for ( int i=1; i<n;i++){
+                for ( int j=1; j<=n-i+1; j++){
+                        System.out.print("*");
+                }   for ( int k=1; k<=2*i-2; k++){
+                    System.out.print(" ");         
+                } for(int j=1; j<=10-i+1; j++)  
+                {  
+                System.out.print("*");  
+                }   
+                System.out.println();  
+                }   */
+
+                
+		     /*  int n = 7;
+
+              for ( int i=0; i<n; i++){
+                for ( int j=0; j<n; j++){
+                    if ( j==3 && i>=0 || i==3 && j>=0 || j==0 && i<=2 ||
+                     i==0 && j>=4 || i==6 && j<=3 || j==6 && i>=4){
+                        System.out.print("*");
+                }
+            else {
+                System.out.print(" ");
+            }   
+                
+             } 
+             
+             System.out.println();
+             
+              }    */
+
+              
+
+      /*   Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt(); // Read the input value for N
+
+        // Upper part of the pattern
+        for (int i = n; i > 0; i--) {
+            // Print left side
+            for (int j = n; j > 0; j--) {
+                if (j >= i) {
+                    System.out.print(j + " ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // Print spaces in the middle
+            for (int j = 0; j <= n; j++) {
+                if (j < i) {
+                    System.out.print("  ");
+                } else {
+                    System.out.print(j + " ");
+                }
+            }
+            System.out.println(); // Move to the next line
+        }
+
+        // Middle part of the pattern
+        for (int j = n; j >= 0; j--) {
+            System.out.print(j + " ");
+        }
+        for (int j = 1; j <= n; j++) {
+            System.out.print(j + " ");
+        }
+        System.out.println(); // Move to the next line
+
+        // Lower part of the pattern
+        for (int i = 1; i <= n; i++) {
+            // Print left side
+            for (int j = n; j >= 0; j--) {
+                if (j >= i) {
+                    System.out.print(j + " ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // Print right side
+            for (int j = 1; j <= n; j++) {
+                if (j < i) {
+                    System.out.print("  ");
+                } else {
+                    System.out.print(j + " ");
+                }
+            }
+            System.out.println(); // Move to the next line
+        } */
+
+        
+    
+        Scanner sc = new Scanner(System.in);
+
+        int m = sc.nextInt();
+        int n = sc.nextInt();
+        
+
+        int[][] arr = new int[m][n];
+
+
+        compose(arr, m, n);
+        display(arr, m, n);
+    }
+
+
+        static void compose(int[][] arr, int m, int n){
+
+            int naturalNum = 1;
+
+
+            for (int i=0; i<=m; i++){
+                for ( int j=0; j<=n; j++){
+                    arr[i][j] = naturalNum++;
+                }
+            }
+
+
+        }
+
+
+        static void display(int[][] arr, int m, int n ){
+
+            for (int i=0; i<arr.length; i++){
+                for ( int j=0; j<arr[0].length; j++){
+                    System.out.println(arr[i][j]+" ");
+        } System.out.println(); } 
+
+    }
+
+
+
+        
+
+}
