@@ -1,4 +1,4 @@
-package nger;
+package next;
 
 public class nger {
 
